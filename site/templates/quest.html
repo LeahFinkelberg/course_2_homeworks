@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %} Опрос {% endblock %}
+
+{% block content %}
+<form action="/results" method = 'GET'>
+    <fieldset>
+    <legend><b>Опрос про использование носителями русского глаголов на -ивать</b></legend>
+    "В современности не система ценностей ____ социальные практики, а, скорее, наоборот."<br>
+    <input type="radio" name="q1" value="обусловливает"> обусловливает<br>
+    <input type="radio" name="q1" value="обуславливает"> обуславливает<br>
+    "Еще более 200 судов ____ в портах."<br>
+    <input type="radio" name="q2" value="простоивает"> простоивает<br>
+    <input type="radio" name="q2" value="простаивает"> простаивает<br>
+    "Как же тебе не стыдно ____ паспорт?"<br>
+    <input type="radio" name="q3" value="просрочивать"> просрочивать<br>
+    <input type="radio" name="q3" value="просрачивать"> просрачивать<br>
+    "...как будто это прикосновение могло ____ или возбуждать его."<br>
+    <input type="radio" name="q4" value="успокоивать"> успокоивать<br>
+    <input type="radio" name="q4" value="успокаивать"> успокаивать<br>
+    "Главный бухгалтер Солодкова не часто ____ своим посещением офис фонда, расположенный на рынке "Привокзальный"."<br>
+    <input type="radio" name="q5" value="удостоивает"> удостоивает<br>
+    <input type="radio" name="q5" value="удостаивает"> удостаивает<br>
+    "С одним ребенком ____ детальки корзиночки и обуви из соломки"<br>
+    <input type="radio" name="q6" value="изготовливаем"> изготовливаем<br>
+    <input type="radio" name="q6" value="изготавливаем"> изготавливаем<br>
+    "Еще этот добряк умел ловко все ____."<br>
+    <input type="radio" name="q7" value="удвоивать"> удвоивать<br>
+    <input type="radio" name="q7" value="удваивать"> удваивать<br>
+    "... _____ рукав в реке Каяле."<br>
+    <input type="radio" name="q8" value="обмочивает"> обмочивает<br>
+    <input type="radio" name="q8" value="обмачивает"> обмачивает<br>
+    "...или же, когда он хотел насладиться вполне, _____ их тайно и с уловками самыми постыдными."<br>
+    <input type="radio" name="q9" value="обустроивать"> обустроивать<br>
+    <input type="radio" name="q9" value="обустраивать"> обустраивать<br>
+        Ваше имя?<br>
+        Например: Даша<br>
+    <input type="text" name="name" required pattern='[A-Za-zА-Яа-яЁё]+'><br>
+        Ваша фамилия?<br>
+        Например: Попова<br>
+    <input type="text" name="surname" required pattern='[A-Za-zА-Яа-яЁё]+'><br>
+        Ваш возраст?<br>
+        Например: 10<br>
+    <input type="text" name="age" required pattern='[0-9]+'><br>
+        Где вы прожили Большую часть своей жизни?<br>
+        Например: село Большие Боты<br>
+    <input type="text" name="city" required pattern='[A-Za-zА-Яа-яЁё\s]+'><br>
+        Ваш гендер?<br>
+    <input type="radio" name="gender" value="Male"> Male<br>
+    <input type="radio" name="gender" value="Female"> Female<br>
+    <p><input type="submit" value="Отправить"></p>
+    </fieldset>
+</form>
+<p><a href='/'>Инструкция</a></p>
+{% endblock %}
