@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} Главная страница {% endblock %}
+
+{% block content %}
+  <form action="/questionaire" method = 'GET'>
+      <fieldset>
+          <legend><b>Опрос про чередование ударных "о" и "а" в корнях глаголов</b></legend>
+      <p>В русском языке есть явление чередования корневых ударных гласных "а" и "о" в совершенном и не совершенном виде глаголов. Данный опрос поможет увидеть, насколько продуктивно это чередование в современном русском языке.</p>
+      Согласны ли Вы пройти опрос?<br>
+      <input type="radio" name="ask" value="yes" checked>Да<br>
+      <p><input type="submit" value="Отправить"></p>
+      </fieldset>
+  </form>
+  <p><a href='/questionaire'>Опрос</a></p>
+{% endblock %}
